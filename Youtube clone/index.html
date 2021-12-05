@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d829865ea3.js"></script>
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+       body{
+           background-color: #F9F9F9;
+           margin: 0px;
+            padding: 0px;
+       }
+        #nav_Bar{
+            margin-top: -50px;
+           position: fixed;
+            background-color: rgba(255, 255, 255, 0.973);
+            display: flex;
+            gap: 20px;
+            padding: 5px;
+            box-sizing: border-box;
+            justify-content: baseline;
+            align-items: center;
+        }
+
+     
+        .meanu_icon{
+            width: 3%;
+            margin-left: 10px;
+        }
+        .meanu_icon > i {
+            font-size:20px;
+        }
+        .youtube_Logo{
+            width: 27%;
+        }
+        .youtube_img_div{
+            width: 38%;
+            text-align: left;
+        }
+        .youtube_img_div > a > img{
+            width: 65%;
+        }
+
+        .search_Input_Div{
+            display: flex;
+            width: 38%;
+        }
+        
+        .search_input_child_div {
+            width: 90%;
+            border: 1px solid rgb(160, 160, 160);
+            height: 56%;
+        }
+        input{
+            border:transparent;
+            font-size: 16px;
+            padding: 6px;
+        }
+        input:focus, textarea:focus, select:focus{
+           outline:  none;
+           font-size: 16px;
+        }
+        .search_btn{
+            background-color: #F9F9F9;
+            width: 51px;
+            padding: 7px;
+            border: 1px solid rgb(94, 94, 94);
+            cursor: pointer;
+        }
+        .mic_icon{
+            margin-right: 30px;
+            margin-left: 10px;
+        }
+        .mic_icon_btn{
+            background-color: #F9F9F9;
+            border-radius: 100%;
+            border: none;
+            width: 37px;
+            height: 37px;
+        }
+        .mic_icon_btn > i{
+          
+           width: 10px;
+          font-size: 14px;
+           
+        }
+
+        .same_icon {
+            margin-left: 13%;
+        }
+        .same_icon > i{
+            margin-left: 20px;
+            font-size: 18px;
+            color: rgb(104, 104, 104);
+        }
+
+        .google_email{
+            margin-left: 2%; 
+            width: 3%; 
+            height: 40px;
+
+        }
+
+        .firest_lettter{
+            width: 80%;
+            height: 35px;
+            font-size: 15px;
+            text-align: center;
+            border-radius: 100%;
+            padding: 7px;
+            border: none;
+            color: white;
+            text-align: center;
+            background-color: blueviolet;
+        }
+
+        #silder_meanu{
+            /* display: none; */
+            width:70px;
+            background-color: #fff;
+            position: fixed;
+            height: 100%;
+            text-align: center;
+            top: 50px;
+        }
+
+        .silder_meanu_small > a{
+            text-decoration: none;
+            color: black;
+        }
+        .silder_div_icon{
+            margin-top: 25px;
+        }
+
+        .silder_div_icon > i{
+            font-size: 25px;
+            margin-top: 19px;
+        }
+        .silder_div_icon > p{
+            margin: 8px;
+            padding: 0;
+        }
+
+
+        #main_Videos_Show{
+           
+            width: 90%;
+            padding: 0px 15px 15px 15px;
+            margin: auto;
+            margin-top: 50px;
+            display: grid;
+            grid-template-columns: repeat(4 , 26%);
+        }
+        .videos_Div{
+            margin-left: 15px;
+            margin-top: 60px;
+        }
+
+        .videos_thubmail_div{
+            width: 100%;
+        }
+        .videos_thubmail_div > img{
+            width: 100%;
+        }
+
+        .videos_first_div{
+            display: flex;
+            padding: 1px;
+            box-sizing: border-box;
+            gap:10px;
+            align-items: center;
+        }
+
+        .channel_first_img{
+            width: 38px;
+            height: 37px;
+           
+        }
+        .channel_first_img > img{
+            width: 100%;
+            height: 90%;
+            border-radius: 50%;
+        }
+
+        .video_channel_name{
+            width: 75%;
+            margin: auto;
+            text-align: left;
+        }
+
+        .video_channel_name > p{
+            font-size:15px;
+            line-height:22px;
+           
+            color: #414141;
+            font-family: sans-serif;
+        }
+
+        .channel_Second_div{
+            width: 100%;
+        }
+        .text_title_text {
+            margin: auto;
+            width: 98%;
+            font-size: 0.8rem;
+            line-height: 20px;
+            margin-top: 10px;
+            margin-bottom:10px;
+            height: 40px;
+            overflow: hidden;
+        }
+        .text_title_text > h3{
+            text-overflow: ellipsis; 
+          
+        }
+        .title_three_dots > i{
+            margin-left:-10px;
+        }
+
+        #main_Videos_Show > :nth-child(1) , #main_Videos_Show > :nth-child(2) , #main_Videos_Show > :nth-child(3) , #main_Videos_Show > :nth-child(4){
+            margin-top:40px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="nav_Bar">
+
+        <div class="meanu_icon">
+            <i class="fas fa-bars"></i>
+        </div>
+       
+        <div class="youtube_Logo">
+            <div class="youtube_img_div">
+               <a href=""><img src="https://logos-world.net/wp-content/uploads/2020/04/YouTube-Logo.png" alt=""></a> 
+            </div>
+        </div>
+
+        <div class="search_Input_Div">
+            <div class="search_input_child_div">
+             <input type="text" id="search" placeholder="Search">
+             </div>
+             <div class="btn_Div">
+                 <button class="search_btn" onclick="Serchvideos()">
+                    <i class="fas fa-search"></i>
+                 </button>
+             </div>
+             <div class="mic_icon">
+                 <button class="mic_icon_btn">
+                <i class="fas fa-microphone"></i>
+            </button>
+             </div>
+        </div>
+
+        <div class="same_icon">
+            <i class="fas fa-video"></i>
+            <i class="fas fa-bars"></i>
+            <i class="far fa-bell"></i>
+        </div>
+        <div class="google_email">
+            <button class="firest_lettter">
+                V
+            </button>
+        </div>
+
+    </div>
+    <div id="silder_meanu">
+        <div class="silder_meanu_small">
+            <a href=""><div class="silder_div_icon">
+                <i class="fas fa-home"></i>
+                <p>Home</p>
+            </div></a>
+            
+            <div class="silder_div_icon">
+                <i class="far fa-compass"></i>
+                <p>Explore</p>
+            </div>
+            <div class="silder_div_icon">
+                <i class="fas fa-home"></i>
+                <p>Home</p>
+            </div>
+            <div class="silder_div_icon">
+                <i class="fas fa-home"></i>
+                <p>Home</p>
+            </div>
+        </div>
+        
+    </div>
+
+
+    <div id="main_Videos_Show"  = "">
+
+    </div>
+
+</body>
+</html>
+
+<script>
+
+let apikey = "AIzaSyCIX-SjR55HiqihJ--4JerblmaYoabWMLI"
+
+let apikey2 = "AIzaSyB4KUKj6-oMbir5pilEzimC7qhGEL3GO-c"
+
+async function top50Youtube_video(){
+
+    try{
+
+
+    
+    let url =`https://www.googleapis.com/youtube/v3/videos/?part=contentDetails&chart=mostPopular&regionCode=IN&maxResults=50&part=snippet&key=${apikey2}`;
+    
+    let rep = await fetch(url)
+   
+    let data = await rep.json()
+   
+    let array_of_videos = data.items
+        appendVideos(array_of_videos)
+
+    }catch (err){
+        console.log(err)
+    }
+
+}
+
+top50Youtube_video()
+
+let main = document.querySelector("#main_Videos_Show")
+
+
+let appendVideos = (arr) => {
+        console.log('arr:', arr)
+
+    arr.forEach(({snippet ,id : {videoId}}) => {
+
+        let url = snippet.thumbnails.medium.url
+
+        let channel_Name = snippet.channelTitle
+
+        let title = snippet.title
+
+        let videos_Div = document.createElement("div")
+        videos_Div.setAttribute("class" , "videos_Div")
+        
+        videos_Div.innerHTML=` <div class="videos_thubmail_div">
+                <img src=${url} alt="">
+            </div>
+            <div class="videos_first_div">
+                <div class="channel_first_img">
+                    <img src=${url} alt="">
+                </div>
+                <div class="channel_Second_div">
+                    <div class="text_title_text">
+                        <h3>${title}</h3>
+                    </div>
+                </div>
+                <div class="title_three_dots">
+                    <i class="fas fa-ellipsis-v"></i>
+                </div>
+            </div>
+            <div class="video_channel_name">
+                <p>${channel_Name}</p>
+                <p>1.1M views - 10day ago</p>
+            </div>`
+
+            main.append(videos_Div)
+    })
+
+}
+
+
+let Serchvideos = () => {
+
+    let inp = document.getElementById("search").value
+
+    localStorage.setItem("Search_value" , inp)
+
+    window.location.href= "./search.html"
+
+}
+
+
+
+
+</script>
