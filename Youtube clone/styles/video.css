@@ -83,13 +83,16 @@ select:focus {
 }
 
 .same_icon {
-  margin-left: 13%;
+  margin-left: 8%;
 }
 .same_icon > i {
-  margin-left: 20px;
+  margin-left: 30px;
   font-size: 18px;
   color: rgb(104, 104, 104);
 }
+
+
+
 
 .google_email {
   margin-left: 2%;
@@ -103,16 +106,19 @@ select:focus {
   font-size: 15px;
   text-align: center;
   border-radius: 100%;
-  padding: 7px;
   border: none;
   color: white;
   text-align: center;
-  background-color: blueviolet;
+
+}
+
+.firest_lettter > img{
+  width: 100%;
 }
 
 #Showing_the_video {
   font-family: sans-serif;
-  width: 80%;
+  width: 86%;
   gap: 20px;
   margin: auto;
   margin-top: 80px;
@@ -125,6 +131,7 @@ select:focus {
 .video_tit > h3 {
   margin-top: 8px;
   font-size: 18px;
+  line-height: 23px;
   font-weight: 600;
 }
 
@@ -149,10 +156,6 @@ select:focus {
   font-size: 14px;
 }
 
-.rightSide_suggection {
-  width: 40%;
-  border: 1px solid black;
-}
 
 .channel_div {
   padding: 5px;
@@ -232,4 +235,63 @@ select:focus {
 .silder_div_icon > p {
   margin: 8px;
   padding: 0;
+}
+
+
+.rightSide_suggection {
+  width: 70%;
+ height: 850px;
+ overflow: scroll;
+}
+
+
+
+
+.rightSide_suggection::-webkit-scrollbar {
+  display: none;
+}
+
+.right_div_con {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.right_img {
+  width: 50%;
+
+}
+
+.right_img > img{
+  width: 100%;
+
+}
+
+
+.left_div_text {
+  width:40% ;
+}
+
+
+.left_div_text > h3{
+  width: 100%;
+  height: 41px;
+  font-size: 14px;
+  line-height: 19px;
+  overflow: hidden;
+
+}
+
+.left_div_text > h5{
+  width: 100%;
+  height: 30px;
+  margin-top: 5px;
+  font-size: 14px;
+  overflow: hidden;
+
+}
+
+.left_div_text > p{
+  font-size: 14px;
 }

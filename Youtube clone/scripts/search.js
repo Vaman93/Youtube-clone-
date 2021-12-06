@@ -142,3 +142,19 @@ let give_Same_value = (V_D) => {
     window.location.href = "./video.html"
 }
 
+
+
+
+let Serchvideos = () => {
+
+  let inp = document.getElementById("search").value
+
+    if(inp.length < 1){}
+
+    else{
+    localStorage.setItem("Search_value" , inp)
+
+    window.location.href= "./search.html"
+    }
+
+}

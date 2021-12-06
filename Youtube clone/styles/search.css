@@ -82,10 +82,10 @@ select:focus {
 }
 
 .same_icon {
-  margin-left: 13%;
+  margin-left: 8%;
 }
 .same_icon > i {
-  margin-left: 20px;
+  margin-left: 30px;
   font-size: 18px;
   color: rgb(104, 104, 104);
 }
@@ -102,12 +102,17 @@ select:focus {
   font-size: 15px;
   text-align: center;
   border-radius: 100%;
-  padding: 7px;
   border: none;
-  color: white;
-  text-align: center;
-  background-color: blueviolet;
+ 
 }
+
+
+.firest_lettter > img{
+  width: 100%;
+}
+
+
+
 
 #silder_meanu {
   /* display: none; */

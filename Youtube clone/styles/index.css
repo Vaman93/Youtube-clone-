@@ -82,10 +82,10 @@ select:focus {
 }
 
 .same_icon {
-  margin-left: 13%;
+  margin-left: 8%;
 }
 .same_icon > i {
-  margin-left: 20px;
+  margin-left: 30px;
   font-size: 18px;
   color: rgb(104, 104, 104);
 }
@@ -102,11 +102,13 @@ select:focus {
   font-size: 15px;
   text-align: center;
   border-radius: 100%;
-  padding: 7px;
   border: none;
   color: white;
   text-align: center;
-  background-color: blueviolet;
+ 
+}
+.firest_lettter > img{
+  width: 100%;
 }
 
 #silder_meanu {
@@ -145,6 +147,7 @@ select:focus {
   grid-template-columns: repeat(4, 26%);
 }
 .videos_Div {
+  cursor: pointer;
   margin-left: 15px;
   margin-top: 60px;
 }
@@ -198,10 +201,11 @@ select:focus {
   line-height: 20px;
   margin-top: 10px;
   margin-bottom: 10px;
-  height: 40px;
-  overflow: hidden;
 }
 .text_title_text > h3 {
+  overflow: hidden;
+  width: 95%;
+  height: 40px;
   text-overflow: ellipsis;
 }
 .title_three_dots > i {

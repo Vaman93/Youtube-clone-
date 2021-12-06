@@ -6,8 +6,6 @@ let apikey2 = "AIzaSyB4KUKj6-oMbir5pilEzimC7qhGEL3GO-c"
 async function top50Youtube_video(){
 
     try{
-
-
     
     let url =`https://www.googleapis.com/youtube/v3/videos/?part=contentDetails&chart=mostPopular&regionCode=IN&maxResults=50&part=snippet&key=${apikey2}`;
     
@@ -30,13 +28,13 @@ let main = document.querySelector("#main_Videos_Show")
 
 
 let appendVideos = (arr) => {
-        console.log('arr:', arr)
 
-    arr.forEach(({snippet ,id : {videoId}}) => {
-
+      
+    arr.forEach(({snippet ,id}) => {
+    
         let url = snippet.thumbnails.medium.url
 
-        let channel_Name = snippet.channelTitle
+        let channelTitle = snippet.channelTitle
 
         let title = snippet.title
 
@@ -60,9 +58,28 @@ let appendVideos = (arr) => {
                 </div>
             </div>
             <div class="video_channel_name">
-                <p>${channel_Name}</p>
+                <p>${channelTitle}</p>
                 <p>1.1M views - 10day ago</p>
             </div>`
+
+            let dec = snippet.description
+
+            let publishedAt = snippet.publishedAt
+
+
+            let videoId = id;
+
+            let videos_Info = {
+                videoId,
+                channelTitle,
+                title,
+                dec,
+                publishedAt,
+            }
+
+            videos_Div.addEventListener('click', () =>{
+                showtheVideosOne(videos_Info)
+            })
 
             main.append(videos_Div)
     })
@@ -70,13 +87,23 @@ let appendVideos = (arr) => {
 }
 
 
-let Serchvideos = () => {
+let showtheVideosOne = (V_D) =>{
+    localStorage.setItem("videos_Info", JSON.stringify(V_D))
 
+    window.location.href = "./video.html"
+}
+
+
+let Serchvideos = () => {
     let inp = document.getElementById("search").value
 
+    if(inp.length < 1){}
+
+    else{
     localStorage.setItem("Search_value" , inp)
 
     window.location.href= "./search.html"
+    }
 
 }
 
