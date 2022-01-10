@@ -1,5 +1,5 @@
 let videos_Info = JSON.parse( localStorage.getItem("videos_Info"))
-console.log('videos_Info:', videos_Info)
+
 
 
 let Showing_the_video = document.getElementById("Showing_the_video")
@@ -93,7 +93,7 @@ let right_side = document.querySelector('.rightSide_suggection')
 
 
 let appendVideos = (arr) =>{
-console.log('arr:', arr)
+
 
     arr.forEach(({snippet , id}) =>{
 
