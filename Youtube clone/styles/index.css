@@ -178,9 +178,10 @@ select:focus {
 }
 
 .video_channel_name {
-  width: 75%;
+  width: 73%;
   margin: auto;
   text-align: left;
+  margin-top: -10px;
 }
 
 .video_channel_name > p {

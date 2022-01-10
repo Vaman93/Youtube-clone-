@@ -59,7 +59,7 @@ let appendVideos = (arr) => {
             </div>
             <div class="video_channel_name">
                 <p>${channelTitle}</p>
-                <p>1.1M views - 10day ago</p>
+                <p>1.1M views - 01day ago</p>
             </div>`
 
             let dec = snippet.description
